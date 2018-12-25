@@ -1,0 +1,46 @@
+<div class="col-md-6">
+  <table class="ui celled blue table ">
+    <thead>
+    <tr>
+      <th class="hidden">Select</th>
+      <th>File Name</th>
+      <th>Author</th>
+      <th>Download</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let document of documents">
+        <td class="collapsing">
+            <div class="ui fitted  checkbox">
+              <input type="checkbox"> <label></label>
+            </div>
+          </td>
+      <td>{{document.author}}</td>
+      <td>{{document.comments}}</td>
+      <td><a href ="#">{{document.tags}}</a></td>
+      <td>
+        <button class="ui right  medium primary labeled icon button" (click)="updateDocument(document)" > Update</button></td>
+        <td><button class="ui right  medium negative labeled icon button" (click)="deleteDocument(document)"> Delete</button></td>
+    </tr>
+    </tbody>
+    <tfoot>
+      <tr><th colspan="5">
+        <div class="ui right floated pagination menu">
+          <a class="icon item">
+            <i class="left chevron icon"></i>
+          </a>
+          <a class="item">1</a>
+          <a class="item">2</a>
+          <a class="item">3</a>
+          <a class="item">4</a>
+          <a class="icon item">
+            <i class="right chevron icon"></i>
+          </a>
+        </div>
+      </th>
+    </tr></tfoot>
+  </table>
+
+</div>
+
