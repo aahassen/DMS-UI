@@ -2,25 +2,16 @@
   <table class="ui celled blue table ">
     <thead>
     <tr>
-      <th class="hidden">Select</th>
       <th>File Name</th>
       <th>Author</th>
-      <th>Download</th>
-      <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let document of documents">
-        <td class="collapsing">
-            <div class="ui fitted  checkbox">
-              <input type="checkbox"> <label></label>
-            </div>
-          </td>
+      <td>{{document.filename}}</td>
       <td>{{document.author}}</td>
-      <td>{{document.comments}}</td>
-      <td><a href ="#">{{document.tags}}</a></td>
       <td>
-        <button class="ui right  medium primary labeled icon button" (click)="updateDocument(document)" > Update</button></td>
+        <button class="ui right  medium primary labeled icon button" (click)="updateDocument(document)" > Download</button></td>
         <td><button class="ui right  medium negative labeled icon button" (click)="deleteDocument(document)"> Delete</button></td>
     </tr>
     </tbody>

@@ -1,17 +1,16 @@
 <form class="ui large form ">
 
-  <input type="file" #newfile (change)="uploadFile($event)" name="imageUpload" id="imageUpload"/>
+  <input type="file" #file (change)="uploadFile($event)" name="imageUpload" id="imageUpload"/>
  
   <div class="field">
     <label for="author">Author:</label>
-    <input name="author" id="author" #newauthor>  <!-- changed -->
+    <input name="author" id="author" #author>  
   </div>
   <div class="field">
-    <label for="tags">Tags:</label>
-    <input name="tags" id="tags" #newtags> <!-- changed -->
+    <label for="tags">Tags or Comments:</label>
+    <input name="tags" id="tags" #tags> 
   </div>
- <!-- added this button -->
-  <button (click)="addDocument(newfile, newauthor, newtags)"
+  <button (click)="addDocument(file, author, tags)"
           class="ui positive right floated button">
     Upload Document
   </button>

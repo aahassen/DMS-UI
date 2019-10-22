@@ -9,7 +9,7 @@ import { DocumentService } from './document.service';
 @NgModule({
   declarations: [
     AppComponent,
-    DocumentComponent // <-- added this
+    DocumentComponent
   ],
   imports: [
     BrowserModule,

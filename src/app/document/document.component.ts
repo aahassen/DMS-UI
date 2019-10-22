@@ -1,10 +1,10 @@
 import {
   Component,
   OnInit,
-  Input,        // <-- added,
+  Input,        
   HostBinding
 } from '@angular/core';
-import { Document } from './document.model'; // <-- added
+import { Document } from './document.model'; 
 
 @Component({
   selector: 'app-document',
@@ -14,11 +14,6 @@ import { Document } from './document.model'; // <-- added
 export class DocumentComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
   @Input() documents: Document[];
-
-  constructor() {
-    // document is populated by the Input now,
-    // so we don't need anything here
-  }
 
   ngOnInit() {
   }
