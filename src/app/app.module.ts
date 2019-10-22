@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { AppComponent } from './app.component';
 import { DocumentComponent } from './document/document.component';
 import { DocumentService } from './document.service';
@@ -15,7 +16,8 @@ import { DocumentService } from './document.service';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
 
     
   ],
